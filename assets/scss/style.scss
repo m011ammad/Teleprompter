@@ -1,0 +1,102 @@
+@import "_variable";
+@import "_reboot";
+
+
+// ! header
+header {
+    * {
+        color: $text-l;
+    }
+    .font-range {
+        direction: ltr;
+    }
+}
+    
+// }
+.user-color {
+    min-width: 50px;
+    aspect-ratio: 1;
+    border-radius: $border-radius;
+    border: $border;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-size: 900;
+    cursor: pointer;
+}
+.color-one {
+    background-color: yellow;
+    color: #222;
+}
+.color-two {
+    background-color: #222;
+    color: yellow;
+}
+.user-mirror, .user-direction {
+    border: $border;
+    border-radius: $border-radius;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+// ! main
+main {
+    margin: 10px;
+    .user-text {
+        direction: rtl;
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        padding: 20px;
+        font-size: 24px;
+        font-weight: 900;
+        width: 100%;
+        height: calc(100vh - 130px);
+        // height: auto;
+        // min-height: 300px;
+        overflow-y: scroll;
+        max-width: 900px;
+        border-radius: $border-radius;
+        border: none;
+        background-color: none;
+    }
+
+}
+/* width */
+::-webkit-scrollbar {
+width: 15px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+border-radius: $border-radius;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #888;
+border-radius: $border-radius;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+
+// ! toggle callses
+// mirror
+.add-mirror {
+    transform: scale(-1, 1);
+}
+// ltr
+.add-ltr {
+    direction: ltr !important;
+}
+
+// update bootstrap
+.navbar-dark .navbar-toggler {
+    border: 2px solid #bbb;
+}
